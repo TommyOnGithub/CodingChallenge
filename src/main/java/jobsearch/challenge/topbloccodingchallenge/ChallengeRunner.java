@@ -8,6 +8,7 @@ package jobsearch.challenge.topbloccodingchallenge;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -85,12 +86,26 @@ public class ChallengeRunner {
                 }
             }
             
-            System.out.println(Data1_NumberSetOne);
-            System.out.println(Data1_NumberSetTwo);
-            System.out.println(Data1_WordSetOne);
-            System.out.println(Data2_NumberSetOne);
-            System.out.println(Data2_NumberSetTwo);
-            System.out.println(Data2_WordSetOne);
+            Double[] products = { 
+                Data1_NumberSetOne.get(0) * Data2_NumberSetOne.get(0),
+                Data1_NumberSetOne.get(1) * Data2_NumberSetOne.get(1),
+                Data1_NumberSetOne.get(2) * Data2_NumberSetOne.get(2),
+                Data1_NumberSetOne.get(3) * Data2_NumberSetOne.get(3)
+            };
+            
+            Double[] quotients = { 
+                Data1_NumberSetTwo.get(0) / Data2_NumberSetTwo.get(0),
+                Data1_NumberSetTwo.get(1) / Data2_NumberSetTwo.get(1),
+                Data1_NumberSetTwo.get(2) / Data2_NumberSetTwo.get(2),
+                Data1_NumberSetTwo.get(3) / Data2_NumberSetTwo.get(3)
+            };
+            
+            String[] phrases = {
+                Data1_WordSetOne.get(0) + " " + Data2_WordSetOne.get(0),
+                Data1_WordSetOne.get(1) + " " + Data2_WordSetOne.get(1),
+                Data1_WordSetOne.get(2) + " " + Data2_WordSetOne.get(2),
+                Data1_WordSetOne.get(3) + " " + Data2_WordSetOne.get(3),
+            };
         }
         catch (Exception e) {
             e.printStackTrace();
