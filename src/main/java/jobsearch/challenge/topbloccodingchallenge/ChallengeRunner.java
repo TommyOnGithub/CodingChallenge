@@ -8,11 +8,11 @@ package jobsearch.challenge.topbloccodingchallenge;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
-import javax.net.ssl.HttpsURLConnection;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -38,7 +38,7 @@ public class ChallengeRunner {
      */
     private static void sendPost(String payload) throws Exception {
         URL obj = new URL(URL);
-        HttpsURLConnection con = (HttpsURLConnection)obj.openConnection();
+        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
         
         con.setRequestMethod("POST");
         con.setDoOutput(true);
